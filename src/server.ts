@@ -26,8 +26,8 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
 
     const status = err.status ?? 400;// Bad Request
     const error = err.message ?? 'Ocorreu algum erro.';
-    res.status(status);     
-    res.json({ error});
+    res.status(status);
+    res.json({ error });
 }
 server.use(errorHandler);
 
